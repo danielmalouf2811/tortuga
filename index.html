@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La tortuga dibuja una estrella</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell" aria-labelledby="game-title">
+      <section class="intro">
+        <p class="eyebrow">Juego de tortuga</p>
+        <h1 id="game-title">La tortuga caminante dibuja una estrella de 5 puntas</h1>
+        <p>
+          Pulsa iniciar y mira cómo la tortuga avanza dejando una línea hasta formar una estrella.
+          Puedes reiniciar la animación cuando quieras.
+        </p>
+      </section>
+
+      <section class="stage" aria-label="Escenario donde la tortuga dibuja una estrella">
+        <canvas id="star-canvas" width="720" height="520">
+          Tu navegador no soporta canvas. Actualiza el navegador para jugar.
+        </canvas>
+        <div id="turtle" class="turtle" aria-hidden="true">
+          <span class="shell">🐢</span>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Controles del juego">
+        <button id="start-button" type="button">Iniciar</button>
+        <button id="reset-button" type="button">Reiniciar</button>
+        <label for="speed-range">
+          Velocidad
+          <input id="speed-range" type="range" min="0.5" max="3" value="1" step="0.5" />
+        </label>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
